@@ -1,7 +1,7 @@
 /*
 * Notes: The @objc shows that this class & function should be exposed to Cordova.
 */
-@objc(TestIonicPlugin) class TestIonicPlugin : CDVPlugin {
+@objc(IonicTestPlugin) class IonicTestPlugin : CDVPlugin {
   @objc(pluginFunction:) // Declare your function name.
   func pluginFunction(command: CDVInvokedUrlCommand) { // write the function code.
     /* 

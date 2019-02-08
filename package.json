@@ -1,9 +1,9 @@
 {
-    "name": "TestIonicPlugin",
+    "name": "IonicTestPlugin",
     "version": "0.0.1",
     "description": "Testing a Swift Ionic plugin",
     "cordova": {
-      "id": "cordova-plugin-TestIonicPlugin",
+      "id": "cordova-plugin-ionic-test-plugin",
       "platforms": [
         "ios"
       ]
