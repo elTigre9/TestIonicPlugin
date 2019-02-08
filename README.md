@@ -1,2 +1,2 @@
-# TestIonicPlugin
-Testing an Ionic plugin in Swift
+# IonicTestPlugin
+Testing an Ionic plugin using Swift
