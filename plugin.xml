@@ -9,6 +9,8 @@
     </js-module>
 
     <platform name="ios">
+        <!-- Preference of language version -->
+        <preference name="UseSwiftLanguageVersion" value="4" />
         <config-file target="config.xml" parent="/*">
 
             <feature name="TestIonicPlugin">
