@@ -20,7 +20,7 @@
   @objc(pluginFunction2:)
   func pluginFunction2(command: CDVInvokedUrlCommand) {
     print("getting that money!")
-    print(command.arguments[0])
+    print(command.arguments[0]!)
     var pluginResult = CDVPluginResult (status: CDVCommandStatus_ERROR, messageAs: "The Plugin Failed");
 
     pluginResult = CDVPluginResult(status: CDVCommandStatus_OK, messageAs: "The plugin succeeded");
