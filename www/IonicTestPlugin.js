@@ -8,4 +8,9 @@ var IonicTestPlugin = function() {}; // This just makes it easier for us to expo
 IonicTestPlugin.pluginFunction = function(onSuccess, onError) {
    exec(onSuccess, onError, PLUGIN_NAME, "pluginFunction", []);
 };
+
+IonicTestPlugin.pluginFunction2 = function(theString) {
+   exec(null, null, PLUGIN_NAME, "pluginFunction2", [theString]);
+};
+
 module.exports = IonicTestPlugin;
