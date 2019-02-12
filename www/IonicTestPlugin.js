@@ -9,7 +9,7 @@ IonicTestPlugin.pluginFunction = function(onSuccess, onError) {
    exec(onSuccess, onError, PLUGIN_NAME, "pluginFunction", []);
 };
 
-IonicTestPlugin.pluginFunction2 = function(theString) {
+IonicTestPlugin.pluginFunction2 = function(theString, onSuccess, onError) {
    exec(onSuccess, onError, PLUGIN_NAME, "pluginFunction2", [theString]);
 };
 
