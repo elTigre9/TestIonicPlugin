@@ -10,7 +10,7 @@ IonicTestPlugin.pluginFunction = function(onSuccess, onError) {
 };
 
 IonicTestPlugin.pluginFunction2 = function(options, onSuccess, onError) {
-   exec(onSuccess, onError, PLUGIN_NAME, "pluginFunction2", [options.first]);
+   exec(onSuccess, onError, PLUGIN_NAME, "pluginFunction2", [options]);
 };
 
 module.exports = IonicTestPlugin;
