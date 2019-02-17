@@ -1,3 +1,5 @@
+import Foundation
+
 /*
 * Notes: The @objc shows that this class & function should be exposed to Cordova.
 */
@@ -23,6 +25,16 @@
     print(command.arguments![0])
     var pluginResult = CDVPluginResult (status: CDVCommandStatus_ERROR, messageAs: "The Plugin Failed");
 
+    pluginResult = CDVPluginResult(status: CDVCommandStatus_OK, messageAs: "The plugin succeeded");
+    // Send the function result back to Cordova.
+    self.commandDelegate!.send(pluginResult, callbackId: command.callbackId);
+  }
+
+  @objc(pluginFunction3:)
+  func pluginFunction3(command: CDVInvokedUrlCommand) {
+    print("zip it up")
+    print(command.arguments![0])
+    var pluginResult = CDVPluginResult (status: CDVCommandStatus_ERROR, messageAs: "The Plugin Failed");
     pluginResult = CDVPluginResult(status: CDVCommandStatus_OK, messageAs: "The plugin succeeded");
     // Send the function result back to Cordova.
     self.commandDelegate!.send(pluginResult, callbackId: command.callbackId);

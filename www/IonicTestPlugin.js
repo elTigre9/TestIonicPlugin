@@ -9,8 +9,25 @@ IonicTestPlugin.pluginFunction = function(onSuccess, onError) {
    exec(onSuccess, onError, PLUGIN_NAME, "pluginFunction", []);
 };
 
-IonicTestPlugin.pluginFunction2 = function(options, onSuccess, onError) {
-   exec(onSuccess, onError, PLUGIN_NAME, "pluginFunction2", [options.first]);
+// IonicTestPlugin.pluginFunction2 = function(options) {
+//    exec( null, null, PLUGIN_NAME, "pluginFunction2", [options]);
+// };
+
+IonicTestPlugin.pluginFunction2 = function(options, callback) {
+   exec(callback, function(err) { callback('there was an error: ', err); }, PLUGIN_NAME, "pluginFunction2", [options]);
 };
+
+// this works...kinda
+IonicTestPlugin.pluginFunction3 = function(options, onSuccess, onError) {
+   exec(onSuccess, onError, PLUGIN_NAME, "pluginFunction3", [options]); // or options.first
+};
+
+// IonicTestPlugin.pluginFunction3 = function(options, callback) {
+//    exec(callback, function(err) { callback('there was an error: ', err); }, PLUGIN_NAME, "pluginFunction3", [options]);
+// };
+
+// IonicTestPlugin.pluginFunction4 = function(options, callback) {
+//    exec(callback, function(err) { callback('there was an error: ', err); }, PLUGIN_NAME, "pluginFunction4", [options]);
+// };
 
 module.exports = IonicTestPlugin;
