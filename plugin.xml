@@ -33,8 +33,11 @@
 
         </config-file>
 
+        <config-file parent="/*" target="AndroidManifest.xml">
+        </config-file>
+
         <!-- Add in the plugin .java files here -->
-        <source-file src="src/android/IonicTestPlugin.java" target-dir="src/com/jtech/IonicTestPlugin" />
+        <source-file src="src/android/IonicTestPlugin.java" target-dir="src/ionic/test/plugin/IonicTestPlugin" />
 
     </platform>
 
