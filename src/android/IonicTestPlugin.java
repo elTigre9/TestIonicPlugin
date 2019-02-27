@@ -21,6 +21,7 @@ public class IonicTestPlugin extends CordovaPlugin {
             this.pluginFunction(callbackContext);
             return true;
         } else if (action.equals("pluginFunction2")) {
+            String message = args.getString(0);
             this.pluginFunction(callbackContext);
             return true;
         } else if (action.equals("pluginFunction3")) {
@@ -39,10 +40,10 @@ public class IonicTestPlugin extends CordovaPlugin {
         // callbackContext.error("Expected one non-empty string argument.");
     }
 
-    private void pluginFunction2(CallbackContext callbackContext) {
-        Log.i(TAG, "pluginFunction2 fired!" + callbackContext.getCallbackId());
+    private void pluginFunction2(String message, CallbackContext callbackContext) {
+        Log.i(TAG, "pluginFunction2 fired!" + message + callbackContext.getCallbackId());
         
-        PluginResult result = new PluginResult(PluginResult.Status.OK, "pluginFunction2 success!");
+        PluginResult result = new PluginResult(PluginResult.Status.OK, "pluginFunction2 success!" + message);
         
         
         callbackContext.sendPluginResult(result, callbackContext.getCallbackId());
