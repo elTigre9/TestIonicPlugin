@@ -26,11 +26,11 @@ public class IonicTestPlugin extends CordovaPlugin {
             return true;
         } else if (action.equals("pluginFunction2")) {
             String message = args.getString(0);
-            this.pluginFunction(callbackContext);
+            this.pluginFunction2(message, callbackContext);
             return true;
         } else if (action.equals("pluginFunction3")) {
             String message = args.getString(0);
-            this.pluginFunction(message, callbackContext);
+            this.pluginFunction3(message, callbackContext);
             return true;
         }
         return false;
@@ -50,7 +50,7 @@ public class IonicTestPlugin extends CordovaPlugin {
         PluginResult result = new PluginResult(PluginResult.Status.OK, "pluginFunction2 success!" + message);
         
         
-        callbackContext.sendPluginResult(result, callbackContext.getCallbackId());
+        callbackContext.sendPluginResult(result);
         // callbackContext.error("Expected one non-empty string argument.");
     }
 
