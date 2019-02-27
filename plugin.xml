@@ -28,7 +28,7 @@
         <config-file target="config.xml" parent="/*">
 
             <feature name="IonicTestPlugin">
-                <param name="android-package" value="com.jtech.IonicTestPlugin" />
+                <param name="android-package" value="com.jtech.IonicTestPlugin.IonicTestPlugin" />
             </feature>
 
         </config-file>
@@ -37,7 +37,7 @@
         </config-file>
 
         <!-- Add in the plugin .java files here -->
-        <source-file src="src/android/IonicTestPlugin.java" target-dir="src/ionic/test/plugin/IonicTestPlugin" />
+        <source-file src="src/android/IonicTestPlugin.java" target-dir="src/com/jtech/ionic-test-plugin" />
 
     </platform>
 
