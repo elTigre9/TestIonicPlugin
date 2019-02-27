@@ -1,4 +1,4 @@
-package org.apache.cordova.plugin;
+package com.jtech.IonicTestPlugin;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;

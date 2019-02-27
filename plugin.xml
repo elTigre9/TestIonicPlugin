@@ -28,7 +28,7 @@
         <config-file target="config.xml" parent="/*">
 
             <feature name="IonicTestPlugin">
-                <param name="android-package" value="IonicTestPlugin" />
+                <param name="android-package" value="com.jtech.IonicTestPlugin" />
             </feature>
 
         </config-file>
