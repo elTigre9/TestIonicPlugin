@@ -19,10 +19,6 @@ public class IonicTestPlugin extends CordovaPlugin {
 
     protected static final String TAG = "IonicTestPluginLog: ";
 
-    private String func2Id;
-
-    private String func1Id;
-
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("pluginFunction")) {
@@ -42,7 +38,7 @@ public class IonicTestPlugin extends CordovaPlugin {
 
     private void pluginFunction(CallbackContext callbackContext) {
         Log.i(TAG, "pluginFunction fired!" + callbackContext.getCallbackId());
-        func1Id = callbackContext.getCallbackId();
+        
         callbackContext.success("Got it pluginFunction to fire off!" + callbackContext.getCallbackId());
         
         // callbackContext.error("Expected one non-empty string argument.");
@@ -53,14 +49,11 @@ public class IonicTestPlugin extends CordovaPlugin {
         
         PluginResult result = new PluginResult(PluginResult.Status.OK, "pluginFunction2 success!" + message);
         
-        func2Id = callbackContext.getCallbackId();
-        callbackContext.callbackId = func1Id;
         callbackContext.sendPluginResult(result);
         // callbackContext.error("Expected one non-empty string argument.");
     }
 
     private void pluginFunction3(String message, CallbackContext callbackContext) {
-        callbackContext.callbackId = func2Id;
         Log.i(TAG, "pluginFunction3 fired!" + callbackContext.getCallbackId());
         if (message != null && message.length() > 0) {
             callbackContext.success(message + callbackContext.getCallbackId());
